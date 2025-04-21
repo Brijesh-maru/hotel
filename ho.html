@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <style>
+    table {
+      border: 1px solid black;
+    }
+    td {
+      padding: 12px;
+      border: 1px solid black;
+    }
+    .btn3 {
+      color: white;
+      background-color: green;
+      border: none;
+      border-radius: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .btn5 {
+      color: white;
+      background-color: green;
+      border: none;
+      border-radius: 5px;
+    }
+    .card-text,
+    .card-title {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <!-- navbar sectiom start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section complete -->
+
+    <!-- product section start -->
+    <div class="box text-bg-success">
+      <div class="container">
+        <div class="row row-cols-lg-5 row-cols-md-3 row-cols-md-2">
+          <!-- 1 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/acetic acid.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">strong acid</p>
+                <h5 class="card-title">acetic acid</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">100</span>
+                  <span class="text-decoration-line-through">120</span>
+                  <button
+                    class="btn3"
+                    id="btn1"
+                    onclick="addtocart('100','acetic acid')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('100','acetic acid')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/terepthalic acid2.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">weak acid</p>
+                <h5 class="card-title">terepthalic acid</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">200</span>
+                  <span class="text-decoration-line-through">228</span>
+                  <!-- <button class="btn3" id="btn2" onclick="addToCart('200','terepthalic acid')">Add</button> -->
+                  <!-- <button class="btn5" onclick="removeFromCart('200')">Remove</button> -->
+                  <button
+                    class="btn3"
+                    onclick="addtocart('200','terepthalic acid')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('200','terepthalic acid')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/steric acid2.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">weak acid</p>
+                <h5 class="card-title">steric acid</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">300</span>
+                  <span class="text-decoration-line-through">400</span>
+                  <button
+                    class="btn3"
+                    id="btn3"
+                    onclick="addtocart('300','steric acid')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('300','steric acid')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/sulphuric acid4.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">strong acid</p>
+                <h5 class="card-title">sulphuric acid</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">200</span>
+                  <span class="text-decoration-line-through">300</span>
+                  <button
+                    class="btn3"
+                    id="btn4"
+                    onclick="addtocart('200','sulphuric acid')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('200','sulphuric acid')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/acetic anhydride2.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">strong acid</p>
+                <h5 class="card-title">acetic anhydride</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">100</span>
+                  <span class="text-decoration-line-through">120</span>
+                  <button
+                    class="btn3"
+                    id="btn5"
+                    onclick="addtocart('100','acetic anhydride')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('100','acetic anhydride')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/ispthalic acid3.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">weak acid</p>
+                <h5 class="card-title">isopthalic acid</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">200</span>
+                  <span class="text-decoration-line-through">228</span>
+                  <button
+                    class="btn3"
+                    id="btn6"
+                    onclick="addtocart('200','isopthalic acid')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('200','isopthalic acid')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/monoethylene glycol.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">weak base</p>
+                <h5 class="card-title">mono ethylene glycol</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">200</span>
+                  <span class="text-decoration-line-through">228</span>
+                  <button
+                    class="btn3"
+                    id="btn7"
+                    onclick="addtocart('300','mono ethylene glycol')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('300','mono ethylene glycol')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/ortho chloro phenol2.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">strong acid</p>
+                <h5 class="card-title">o-chloro phenol</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">200</span>
+                  <span class="text-decoration-line-through">300</span>
+                  <button
+                    class="btn3"
+                    id="btn8"
+                    onclick="addtocart('200','o-chloro phenol')"
+                  >
+                    Add
+                  </button>
+
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('200','o-chloro phenol')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 9 -->
+          <div class="col py-2">
+            <div class="card h-100">
+              <img
+                src="/image/chloroform5.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text mb-1">weak base</p>
+                <h5 class="card-title">chloroform</h5>
+                <div class="d-flex justify-content-between mt-4">
+                  <span class="text fw-semibold">200</span>
+                  <span class="text-decoration-line-through">300</span>
+                  <button
+                    class="btn3"
+                    id="btn9"
+                    onclick="addtocart('200','chloroform')"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn5"
+                    onclick="removefromcart('200','chloroform')"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- product section complete -->
+
+          <!-- add to cart section start -->
+          <div class="py-2">
+            <div class="card h-100">
+              <table style="height: 373px; width: 100%">
+                <tr>
+                  <td>cart</td>
+                  <td id="cart-count">0</td>
+                  <td>price</td>
+                  <td id="cart-price">0</td>
+                </tr>
+
+                <tr>
+                  <td>item</td>
+                  <td id="nam" colspan="3"></td>
+                </tr>
+
+                <tr>
+                  <td>GST 18%</td>
+                  <td id="cart-gst">0</td>
+                  <td>Total</td>
+                  <td id="cart-total"></td>
+                </tr>
+
+                <tr>
+                  <td>Discount</td>
+                  <td id="cart-discount"></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <button class="btn3" onclick="discount('5')">5%</button>
+                  </td>
+                  <td>
+                    <button class="btn3" onclick="discount('10')">10%</button>
+                  </td>
+                  <td>
+                    <button class="btn3" onclick="discount('15')">15%</button>
+                  </td>
+                  <td>
+                    <button class="btn3" onclick="discount('20')">20%</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td id="total"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- add to caet section complete -->
+    <!-- js start -->
+
+    <script>
+      let count = 0;
+      let price = 0;
+      let disamount = 0;
+      let cartItems = [];
+
+      function addtocart(p, name) {
+        count++;
+        price += parseInt(p);
+        cartItems.push(name); // Add name to cartItems array
+
+        updateCart();
+      }
+
+      // function removefromcart(p) {
+      //   if (count > 0) {
+      //     count--;
+      //     price -= parseInt(p);
+      //     cartItems.pop(); // Remove the last added item
+      //   }
+
+      //   updateCart();
+      // }
+      function removefromcart(p, name) {
+        if (count > 0) {
+          count--;
+          price -= parseInt(p);
+
+          // Remove specific item by name (first occurrence)
+          const index = cartItems.indexOf(name);
+          if (index !== -1) {
+            cartItems.splice(index, 1);
+          }
+        }
+
+        updateCart();
+      }
+
+      function discount(percentage) {
+        let totalBeforeDiscount = parseFloat(
+          document.getElementById("cart-total").innerText || 0
+        );
+
+        // if (totalBeforeDiscount === 0) return;
+        // Do nothing if cart is empty
+
+        disamount = (totalBeforeDiscount * percentage) / 100;
+
+        document.getElementById("cart-discount").innerText =
+          disamount.toFixed(2);
+        document.getElementById("total").innerText = (
+          totalBeforeDiscount - disamount
+        ).toFixed(2);
+      }
+
+      function updateCart() {
+        document.getElementById("cart-count").innerText = count;
+        document.getElementById("cart-price").innerText = price;
+
+        let gst = price * 0.18;
+        let total = price + gst;
+
+        document.getElementById("cart-gst").innerText = gst.toFixed(2);
+        document.getElementById("cart-total").innerText = total.toFixed(2);
+
+        // Show product names in cart
+        document.getElementById("nam").innerHTML = cartItems
+          .map((item, i) => `${i + 1}. ${item}`)
+          .join("<br>");
+
+        // Reset discount and final total if cart is empty
+        if (count === 0) {
+          document.getElementById("cart-discount").innerText = "0";
+          document.getElementById("total").innerText = "0";
+          disamount = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
